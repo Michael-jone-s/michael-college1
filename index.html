@@ -6,35 +6,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>st.michael's college</title>
         <style>
-            .button {
-  border: none;
-  color: black;
-  padding: 10px 15px;
+            .dropbtn {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  background-color: #3e8e41;
+  color: white;
+  padding: 16px;
   font-size: 14px;
-  margin: 4px 2px;
+  border: none;
   cursor: pointer;
 }
-.button:hover, .button:active
-{
-    color: red;
-    font-size: 125%;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-.button1 {background-color: #4CAF50;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 </head>
         <body style="background-color:rgb(231, 95, 95);">
            <h1 style="background-color: rgba(252, 252, 252, 0.863);">
-            <div><center><image src="logo.svg" alt="logo" width="1500" height="200"> </image></div></h1></body></center>
+            <div><center><image src="logo.svg" style="max-width:50%;height:auto;" alt="logo" width="1500" height="200"> </image></div></h1></body></center>
             <marquee><font color="black"><h3 style="background-color: rgb(247, 243, 243);"> ANNOUNCEMENTS : welcome freshers </h3></font></marquee>
-            <button class="button button1">Home</button>
-            <button class="button button2">About</button>
-            <button class="button button1">Admission</button>
-            <button class="button button2">Services</button>
-            <center><image src="home_src.jpeg" alt="home_src" width="1280" height="720">
+            <button class="dropbtn">Home</button>
+            <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+
+
+            <center><image src="home_src.jpeg" style="max-width:100%;height:auto;" alt="home_src" width="1280" height="720">
             </image></center>
         </body>
     </head>
